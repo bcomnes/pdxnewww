@@ -1,0 +1,43 @@
+{
+  "name": "pdxnode-site",
+  "version": "1.0.0",
+  "description": "The website for pdxnode",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js | tap-spec && standard | snazzy",
+    "build:css": "postcss --use cssnext style.css -o dist/bundle.css",
+    "build:js": "browserify index.js -o dist/bundle.js",
+    "build": "parallelshell 'npm run build:js' 'npm run build:js'",
+    "watch:css": "npm run build:css -- --watch",
+    "watch:js": "budo index.js:dist/bundle.js --live={*.html,dist/*,index.js} --open",
+    "start": "parallelshell 'npm run watch:css' 'npm run watch:js'",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PDXNode/site.git"
+  },
+  "keywords": [
+    "pdx",
+    "pdxnode",
+    "meetup"
+  ],
+  "author": "Bret Comnes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PDXNode/site/issues"
+  },
+  "homepage": "https://github.com/PDXNode/site#readme",
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "budo": "^6.0.4",
+    "cssnext": "^1.8.4",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.3.2",
+    "snazzy": "^2.0.1",
+    "standard": "^5.4.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.2.2",
+    "watchify": "^3.6.1"
+  }
+}

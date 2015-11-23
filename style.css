@@ -1,0 +1,71 @@
+/* Global Styles */
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* site specific stuff */
+
+:root {
+  /* Gradient from firewatchgame.com */
+  --red0: hsla(22, 96%, 89%, 1);
+  --red1: hsla(16, 98%, 65%, 1);
+  --red2: hsla(13, 97%, 63%, 1);
+  --red3: hsla(7, 97%, 63%, 1);
+  --red4: hsla(352, 64%, 48%, 1);
+  --red5: hsla(337, 94%, 25%, 1);
+  --red6: hsla(325, 93%, 17%, 1);
+  --red7: hsla(304, 43%, 12%, 1);
+}
+
+.container {
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom,
+    var(--grad0),
+    var(--grad0) 10%,
+    var(--grad1),
+    var(--grad1) 20%,
+    var(--grad2),
+    var(--grad3),
+    var(--grad4),
+    var(--grad5),
+    var(--grad6),
+    var(--grad7),
+    var(--grad7 40%)
+  );
+  min-height: 100vh;
+}
+
+header.main {
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  background-image: url(static/pdxnode.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  margin: 0;
+  visibility: hidden;
+}
+
+.container main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul.elsewhere {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
