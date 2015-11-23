@@ -21,23 +21,24 @@ body {
   --red5: hsla(337, 94%, 25%, 1);
   --red6: hsla(325, 93%, 17%, 1);
   --red7: hsla(304, 43%, 12%, 1);
+
+  --green0: #516333;
+  --green1: #7EB550;
+  --green2: #8EDB59;
+  --green3: #AAFD6F;
+  --green4: #D3FC9F;
+
 }
 
 .container {
   box-sizing: border-box;
   background-image: linear-gradient(
     to bottom,
-    var(--grad0),
-    var(--grad0) 10%,
-    var(--grad1),
-    var(--grad1) 20%,
-    var(--grad2),
-    var(--grad3),
-    var(--grad4),
-    var(--grad5),
-    var(--grad6),
-    var(--grad7),
-    var(--grad7 40%)
+    var(--green4),
+    var(--green3),
+    var(--green2),
+    var(--green1),
+    var(--green0)
   );
   min-height: 100vh;
 }
